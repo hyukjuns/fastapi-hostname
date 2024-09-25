@@ -19,3 +19,8 @@ pip install "fastapi[standard]"
 fastapi dev main.py
 deactivate
 ```
+
+### Docs & Learn
+- [FastAPI Docs](https://fastapi.tiangolo.com/)
+- [FastAPI Source Code](https://github.com/fastapi/fastapi)
+- [virtual-environments](https://fastapi.tiangolo.com/virtual-environments/#install-packages-directly)
