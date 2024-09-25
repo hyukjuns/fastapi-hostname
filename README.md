@@ -1,1 +1,21 @@
 ### FastAPI
+
+### 기능 구현
+- Print hostname
+- Check Init, Ready, Live Status
+- Print Access Log to STDOUT
+- Print Error Log to STDOUT
+- WSGI
+
+### 작업세팅
+
+```markdown
+python3 -m venv .venv
+source .venv/bin/activate
+# which python
+# python -m pip install --upgrade pip
+pip install "fastapi[standard]"
+# pip install -r requirements.txt
+fastapi dev main.py
+deactivate
+```
