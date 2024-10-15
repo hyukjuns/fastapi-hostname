@@ -1,25 +1,16 @@
-### FastAPI
+### FastAPI Demo App
 
-### 기능 구현
-- Print hostname
-- Check Init, Ready, Live Status
-- Print Access Log to STDOUT
-- Print Error Log to STDOUT
-- WSGI
+### Endpoints
+- / -> return hostname, request header info
+- /hostname -> return hostname
 
-### 작업세팅
-
+### Setup - Def
 ```markdown
 python3 -m venv .venv
 source .venv/bin/activate
-# which python
-# python -m pip install --upgrade pip
 pip install "fastapi[standard]"
-# pip install -r requirements.txt
 fastapi dev main.py
-deactivate
 ```
-
 ### Docs & Learn
 - [FastAPI Docs](https://fastapi.tiangolo.com/)
 - [FastAPI Source Code](https://github.com/fastapi/fastapi)
