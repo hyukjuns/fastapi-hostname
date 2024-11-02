@@ -11,11 +11,10 @@ app = FastAPI()
 def hostname():
     if os.path.exists('/var/run/secrets/kubernetes.io/serviceaccount') or os.getenv('KUBERNETES_SERVICE_HOST') is not None:
         hostname = os.environ.get("HOSTNAME")
-        return {
-                "hostname": {hostname}
-            }
+        return hostname
     else:
         hostname = socket.gethostname()
+        return hostname
     
 # Return hostname, request headers by HTML
 @app.get("/", status_code=200)
@@ -56,6 +55,7 @@ def welcome(request: Request):
     return HTMLResponse(content=html_content, status_code=200)
 
 
+# 로컬 실행 시 디버깅 모드
 if __name__ == "__main__":
     uvicorn.run("app:app", 
                 host="0.0.0.0", 
